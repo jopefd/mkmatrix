@@ -34,7 +34,7 @@ vector<int> GenerateRandomNumbers(const int &length) {
   return numbers;
 }
 
-void CreateMatrixFile(const string &matrix_title, const int &n, const int &m) {
+void CreateMatrixFile(const string &matrix_title, const int &m, const int &n) {
   ofstream matrix_file(matrix_title + ".txt");
 
   for (int i = 0; i < m; i++) {
@@ -47,11 +47,14 @@ void CreateMatrixFile(const string &matrix_title, const int &n, const int &m) {
 }
 
 int main(int argc, char **argv) {
-  int n1 = stoi(argv[1]);
-  int m1 = stoi(argv[2]);
-  int n2 = stoi(argv[3]);
-  int m2 = stoi(argv[4]);
+  int m1 = stoi(argv[1]);
+  int n1 = stoi(argv[2]);
 
-  CreateMatrixFile("matrix1", n1, m1);
-  CreateMatrixFile("matrix2", n2, m2);
+  CreateMatrixFile("matrix1", m1, n1);
+  
+  if (argc > 3) { 
+    int m2 = stoi(argv[3]);
+    int n2 = stoi(argv[4]);
+    CreateMatrixFile("matrix2", m2, n2);
+  }
 }

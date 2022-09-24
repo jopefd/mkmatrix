@@ -13,8 +13,8 @@ mkdir build && cd build && cmake .. && cmake --build .
 Isso irá compilar o executável mkmatrix. Então, basta informar as linhas e colunas desejadas para a(s) matriz(es). O utilitário suporta até duas:
 
 ```sh
-./mkmatrix 3 4 # cria uma matriz com 3 colunas e 4 linhas 
+./mkmatrix 4 3 # cria uma matriz com 4 linhas e 3 colunas 
 ```
 ```sh
-./mkmatrix 3 4 1 2 # cria uma matriz com 3 colunas e 4 linhas e outra com 1 coluna e 2 linhas
+./mkmatrix 4 3 2 1 # cria uma matriz com 4 linhas e 3 colunas e outra com 2 linhas e 1 coluna
 ```
